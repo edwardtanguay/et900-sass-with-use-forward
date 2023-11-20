@@ -1,9 +1,11 @@
+@use '../abstracts/mixins';
+
 .ball-001 {
-	@include ball(navy, 3rem);
+	@include mixins.ball(navy, 3rem);
 }
 
 .ball-002 {
-	@include ball(red, 4rem);
+	@include mixins.ball(red, 4rem);
 
 	&.shadow {
 		box-shadow: 8px 8px 8px #555;
@@ -11,11 +13,11 @@
 }
 
 .ball-003 {
-	@include ball(mix(red, yellow), 3rem);
+	@include mixins.ball(mix(red, yellow), 3rem);
 }
 
 .ball-004 {
-	@include ball(mix(green, orange), 1rem);
+	@include mixins.ball(mix(green, orange), 1rem);
 }
 
 $colors: red, blue, green, orange;

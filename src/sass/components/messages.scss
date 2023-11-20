@@ -1,0 +1,19 @@
+@use '../abstracts/mixins';
+
+.error-text {
+	@include mixins.alert-text(darkred);
+}
+
+.info-text {
+	@include mixins.alert-text(darkgreen, null);
+}
+
+.normal-text {
+	@include mixins.alert-text();
+}
+
+.faded-text {
+	@include mixins.alert-text() {
+		opacity: .5;
+	}
+}
