@@ -1,4 +1,5 @@
 @use '../abstracts/mixins';
+@use '../base/variables' as *;
 
 .ball-001 {
 	@include mixins.ball(navy, 3rem);
@@ -20,7 +21,6 @@
 	@include mixins.ball(mix(green, orange), 1rem);
 }
 
-$colors: red, blue, green, orange;
 
 @for $i from 1 through length($colors) {
 	.box-#{$i} {
