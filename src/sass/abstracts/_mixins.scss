@@ -1,0 +1,25 @@
+@mixin alert-text($color: #555, $border: 2px solid #333) {
+	background-color: $color;
+	color: white;
+	font-variant: small-caps;
+	padding:.5rem;
+	width: fit-content;
+	border: $border;
+	@content;
+}
+
+@mixin ball($bgcolor, $size) {
+	background-color: $bgcolor;
+	width: $size;
+	height: $size;
+	border-radius: 50%;
+	@if $size >= 0rem {
+		border: 0px;
+	}
+	@if $size >= 2rem {
+		border: 2px solid black;
+	}
+	@if $size >= 4rem {
+		border: 4px solid black;
+	}
+}

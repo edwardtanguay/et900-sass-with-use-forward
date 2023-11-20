@@ -1,0 +1,39 @@
+.ball-001 {
+	@include ball(navy, 3rem);
+}
+
+.ball-002 {
+	@include ball(red, 4rem);
+
+	&.shadow {
+		box-shadow: 8px 8px 8px #555;
+	}
+}
+
+.ball-003 {
+	@include ball(mix(red, yellow), 3rem);
+}
+
+.ball-004 {
+	@include ball(mix(green, orange), 1rem);
+}
+
+$colors: red, blue, green, orange;
+
+@for $i from 1 through length($colors) {
+	.box-#{$i} {
+		background-color: nth($colors, $i);
+		width: 3rem;
+		height: 3rem;
+		border: 1px solid black;
+	}
+}
+
+@each $color in $colors {
+	.rectangle-#{$color} {
+		background-color: $color;
+		width: 8rem;
+		height: 3rem;
+		border: 1px solid black;
+	}
+}

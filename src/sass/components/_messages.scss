@@ -1,0 +1,17 @@
+.error-text {
+	@include alert-text(darkred);
+}
+
+.info-text {
+	@include alert-text(darkgreen, null);
+}
+
+.normal-text {
+	@include alert-text();
+}
+
+.faded-text {
+	@include alert-text() {
+		opacity: .5;
+	}
+}
