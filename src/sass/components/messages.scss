@@ -1,11 +1,12 @@
 @use '../abstracts/mixins';
+@use '../base/variables' as *;
 
 .error-text {
-	@include mixins.alert-text(darkred);
+	@include mixins.alert-text($errorColor);
 }
 
 .info-text {
-	@include mixins.alert-text(darkgreen, null);
+	@include mixins.alert-text($infoColor, null);
 }
 
 .normal-text {
